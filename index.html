@@ -23,12 +23,11 @@
                 color.set('#666');
                 el.components.material.material.color.copy(color);
                 el.addEventListener('hit', () => {
-                    color.addScalar(0.05);
-                    el.components.material.material.color.copy(color);
+                    //el.components.material.material.color.copy(color);
+                    //put song here
                 });
                 el.addEventListener('die', () => {
-                    color.setRGB(1, 0, 0);
-                    el.components.material.material.color.copy(color);
+                    el.parentNode.removeChild(el);
                 });
             }
         });
@@ -42,23 +41,31 @@
 
 <body>
     <a-scene>
+        
         <a-assets>
             <a-asset-item id="map" src="assets/model.dae"></a-asset-item>
             <a-asset-item id="tower" src="assets/tower/scene.gltf"></a-asset-item>
             <a-asset-item id="weapons" src="assets/odd/odd.dae"></a-asset-item>
             <a-asset-item id="arrow" src="assets/weapons/model.dae"></a-asset-item>
+            <a-asset-item id="manta-obj" src="assets/manta/Manta.obj"></a-asset-item>
+            <a-asset-item id="manta-mtl" src="assets/manta/Manta.mtl"></a-asset-item>
         </a-assets>
 
+        
         <a-collada-model src="#map"></a-collada-model>
+
+        
+        <a-obj-model hit-handler src="#manta-obj" class="target" target="healthPoints: 10" rotation="55 20 0" position="-4 6 -4" mtl="#manta-mtl"></a-obj-model>
+
+        
         <a-gltf-model src="#tower" scale="0.1 0.08 0.1" rotation="0 180 0" position="-40 1 -17.034564105607295"></a-gltf-model>
 
+        
         <a-entity collada-model="#arrow" id="bulletTemplate" bullet scale="0.015 0.015 0.015"  material="color: grey" ></a-entity>
         
 
-        <a-entity class="target" target="healthPoints: 10" geometry="primitive: box" material="color: teal" position="0 0 -4"
-            hit-handler></a-entity>
-
-        <a-camera id="camera" position="-1 1.4 0">
+        
+        <a-camera id="camera" listener position="-1 1.4 0">
                 <a-collada-model position="0.5 -1 -0.1" scale="3 3 3" rotation="0 0 110" src="#weapons"></a-collada-model>
                 <a-entity shooter click-to-shoot position="-1 -0.4 -1" ></a-entity>
         </a-camera>

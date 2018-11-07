@@ -1,0 +1,16 @@
+newmtl Flying_manta
+Ka 0.5647059 0.5647059 0.5647059
+Kd 0.5647059 0.5647059 0.5647059
+d 1
+Tr 1
+map_Ka Flying_manta.png
+map_Kd Flying_manta.png
+map_d Flying_manta.png
+newmtl plasma
+Ka 0.9098039 0 0
+Kd 0.9098039 0 0
+d 1
+Tr 1
+map_Ka plasma.png
+map_Kd plasma.png
+map_d plasma.png

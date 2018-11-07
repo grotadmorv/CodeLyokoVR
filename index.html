@@ -50,6 +50,9 @@
             <a-asset-item id="manta-obj" src="assets/manta/Manta.obj"></a-asset-item>
             <a-asset-item id="manta-mtl" src="assets/manta/Manta.mtl"></a-asset-item>
             <a-asset-item id="megatank" src="assets/megatank/model.dae"></a-asset-item>
+            <a-asset-item id="block" src="assets/block/model.dae"></a-asset-item>
+            <a-asset-item id="crabe" src="assets/crabe/model.dae"></a-asset-item>
+            <a-asset-item id="ulrich" src="assets/ulrich/model.dae"></a-asset-item>
         </a-assets>
 
         
@@ -58,7 +61,9 @@
         
         <a-obj-model hit-handler src="#manta-obj" class="target" target="healthPoints: 10" rotation="55 20 0" position="-4 6 -4" mtl="#manta-mtl"></a-obj-model>
         <a-collada-model hit-handler class="target" rotation="0 180 0" target="healthPoints: 15" scale="3 3 3" position="12 1.1 7" src="#megatank"></a-collada-model>
-        
+        <a-collada-model hit-handler class="target" rotation="0 180 0" scale="1 1 1" target="healthPoints: 15"  position="-33 0 -25" src="#block"></a-collada-model>
+        <a-collada-model hit-handler class="target" target="healthPoints: 15" scale="1 1 1" position="12 0 7" src="#crabe"></a-collada-model>
+
         <a-gltf-model src="#tower" scale="0.1 0.08 0.1" rotation="0 180 0" position="-40 1 -17.034564105607295"></a-gltf-model>
 
         

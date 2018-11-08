@@ -10,7 +10,7 @@ AFRAME.registerComponent('crabe', {
         var scene = document.querySelector("a-scene");
         var animationData = {
             attribute: 'position',
-            dur: 10000,
+            dur: 9000,
             from: '127.51253047644536 0 55.02762217530418',
             to: '110.58353408752447 0 6.594503240760893'
         };
@@ -20,11 +20,11 @@ AFRAME.registerComponent('crabe', {
 
         var animation_two = document.createElement("a-animation");
         var animationData_two = {
-            attribute: 'rotation',
-            dur: 1000,
-            delay: 9000,
-            from: '0 -360 0',
-            to: '0 0 0'
+          attribute: 'position',
+          delay: 10000,
+          dur: 5000,
+          from: '110.58353408752447 0 6.594503240760893',
+          to: '43.29047182809649 0 -2.626120859614865'
         };
         Object.keys(animationData_two).forEach(function (attr) {
             animation_two.setAttribute(attr, animationData_two[attr]);
@@ -32,11 +32,11 @@ AFRAME.registerComponent('crabe', {
 
         var animation_three = document.createElement("a-animation");
         var animationData_three = {
-            attribute: 'position',
-            delay: 10000,
-            dur: 5000,
-            from: '110.58353408752447 0 6.594503240760893',
-            to: '43.29047182809649 0 -2.626120859614865'
+          attribute: 'position',
+          dur: 2000,
+          delay: 16000,
+          from: '43.29047182809649 0 -2.626120859614865',
+          to: '33.80820371042774 0 10.77897504312363'
         };
         Object.keys(animationData_three).forEach(function (attr) {
             animation_three.setAttribute(attr, animationData_three[attr]);
@@ -45,11 +45,11 @@ AFRAME.registerComponent('crabe', {
 
         var animation_four = document.createElement("a-animation");
         var animationData_four = {
-            attribute: 'position',
-            dur: 2000,
-            delay: 16000,
-            from: '43.29047182809649 0 -2.626120859614865',
-            to: '34.04181603907202 0 10.733877518938284'
+          attribute: 'position',
+          dur: 4000,
+          delay: 18000,
+          from: '33.80820371042774 0 10.77897504312363',
+          to: '15.182594378517683 0 2.754320290749121'
         };
         Object.keys(animationData_four).forEach(function (attr) {
             animation_four.setAttribute(attr, animationData_four[attr]);
@@ -60,23 +60,11 @@ AFRAME.registerComponent('crabe', {
             attribute: 'position',
             dur: 4000,
             delay: 18000,
-            from: '34.04181603907202 0 10.733877518938284',
-            to: '-4.967891677320051 0 1.8993933252997939'
+            from: '15.182594378517683 0 2.754320290749121',
+            to: '3.215706003309395 0 0.4845296198023628'
         };
         Object.keys(animationData_five).forEach(function (attr) {
             animation_five.setAttribute(attr, animationData_five[attr]);
-        });
-
-        var animation_six = document.createElement("a-animation");
-        var animationData_six = {
-            attribute: 'rotation',
-            dur: 1000,
-            delay: 20000,
-            from: '0 -360 0',
-            to: '0 -380 0'
-        };
-        Object.keys(animationData_six).forEach(function (attr) {
-            animation_six.setAttribute(attr, animationData_six[attr]);
         });
 
         crabe.appendChild(animation);
@@ -84,12 +72,11 @@ AFRAME.registerComponent('crabe', {
         crabe.appendChild(animation_three)
         crabe.appendChild(animation_four)
         crabe.appendChild(animation_five)
-        crabe.appendChild(animation_six)
         setTimeout(function(){
             el.parentNode.removeChild(crabe)
             var real_block = document.createElement("a-collada-model");
             real_block.setAttribute("hit-handler", true);
-            real_block.setAttribute('position', { x :-4.967891677320051, y:0, z: 1.8993933252997939})
+            real_block.setAttribute('position', { x :3.215706003309395, y:0, z: 0.4845296198023628})
             real_block.setAttribute('src', '#crabe')
             real_block.setAttribute('target', "healthPoints: 15");
             scene.appendChild(real_block);

@@ -41,8 +41,8 @@ AFRAME.registerComponent('start-the-game', {
             xana_audio.playSound();
             setTimeout(function () { 
                 manta_audio.playSound(); 
-                // camera.setAttribute("moove-odd-one", true);
-                block_one.setAttribute("moove-block-one", true);
+                camera.setAttribute("moove-odd-one", true);
+                // block_one.setAttribute("moove-block-one", true);
             }, 10000);
         });
     }

@@ -4,7 +4,6 @@
 AFRAME.registerComponent('hit-handler', {
     dependencies: ['material'],
     init: function () {
-        var color;
         var el = this.el;
 
         el.addEventListener('hit', () => {

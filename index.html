@@ -7,6 +7,7 @@
 <body>
     <a-scene>
         
+        <!-- all assets here -->
         <a-assets>
             <a-asset-item id="map" src="assets/map/model.dae"></a-asset-item>
             <a-asset-item id="tower" src="assets/tower/scene.gltf"></a-asset-item>
@@ -18,25 +19,34 @@
             <a-asset-item id="block" src="assets/block/model.dae"></a-asset-item>
             <a-asset-item id="crabe" src="assets/crabe/model.dae"></a-asset-item>
             <a-asset-item id="ulrich" src="assets/ulrich/model.dae"></a-asset-item>
+            <a-asset-item id="xana_key" src="assets/key_xana/model.dae" ></a-asset-item>
+            <a-asset-item id="intro" response-type="arraybuffer" src="assets/song/intro.mp3" ></a-asset-item>
+            <a-asset-item id="xana_song_asset" response-type="arraybuffer" src="assets/song/xana.mp3" ></a-asset-item>
         </a-assets>
 
-        
+        <!-- map and sound -->
         <a-collada-model src="#map"></a-collada-model>
-
-        
-        <a-obj-model hit-handler src="#manta-obj" class="target" target="healthPoints: 10" rotation="55 20 0" position="-4 6 -4" mtl="#manta-mtl"></a-obj-model>
-        <a-collada-model hit-handler class="target" rotation="0 180 0" target="healthPoints: 15" scale="3 3 3" position="12 1.1 7" src="#megatank"></a-collada-model>
-        <a-collada-model hit-handler class="target" rotation="0 180 0" scale="1 1 1" target="healthPoints: 15"  position="-33 0 -25" src="#block"></a-collada-model>
-        <a-collada-model hit-handler class="target" target="healthPoints: 15" scale="1 1 1" position="12 0 7" src="#crabe"></a-collada-model>
-
+        <a-sound src="#intro" id="intro_song" autoplay="true" loop="true" ></a-sound>
+        <a-sound src="#xana_song_asset" id="xana_song" autoplay="false" loop="true" ></a-sound>
         <a-gltf-model src="#tower" scale="0.1 0.08 0.1" rotation="0 180 0" position="-40 1 -17.034564105607295"></a-gltf-model>
 
-        
+        <!-- weapons of Odd -->
         <a-entity collada-model="#arrow" id="bulletTemplate" bullet scale="0.015 0.015 0.015"  material="color: grey" ></a-entity>
+
+        <!-- Xana key, hit him for start the game ! -->
+        <a-collada-model start-the-game class="target" target="healthPoints: 1" rotation="90 0 -190" scale="0.09 0.09 0.09" position="-39 1.4 -15" src="#xana_key" ></a-collada-model>
+
+        <!-- Xana monster -->
+        <!--<a-obj-model hit-handler src="#manta-obj" class="target" target="healthPoints: 10" rotation="55 20 0" position="-4 6 -4" mtl="#manta-mtl"></a-obj-model>
+        <a-collada-model hit-handler class="target" rotation="0 180 0" target="healthPoints: 15" scale="3 3 3" position="12 1.1 7" src="#megatank"></a-collada-model>
+        <a-collada-model hit-handler class="target" rotation="0 180 0" scale="1 1 1" target="healthPoints: 15"  position="-33 0 -25" src="#block"></a-collada-model>
+        <a-collada-model hit-handler class="target" target="healthPoints: 15" scale="1 1 1" position="12 0 7" src="#crabe"></a-collada-model> -->
+
+    
         
 
         
-        <a-camera id="camera" listener position="-1 1.4 0">
+        <a-camera id="camera" position="-39.651780239809426 1.4 -18.106626317807265"> <!-- -1 1.4 0 -->
                 <a-collada-model position="0.5 -1 -0.1" scale="3 3 3" rotation="0 0 110" src="#weapons"></a-collada-model>
                 <a-entity shooter click-to-shoot position="-1 -0.4 -1" ></a-entity>
         </a-camera>
@@ -44,4 +54,5 @@
     <script src="assets/js/camera-position.js"></script>
     <script src="assets/js/click-shoot.js" ></script>
     <script src="assets/js/hit-and-die.js" ></script>
+    <script src="assets/js/start-the-game.js" ></script>
 </body>

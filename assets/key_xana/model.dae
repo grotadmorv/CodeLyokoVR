@@ -1985,10 +1985,10 @@
     </library_effects>
     <library_images>
         <image id="ID12">
-            <init_from>model/__Glass_Sky_Reflection_.jpg</init_from>
+            <init_from>__Glass_Sky_Reflection_.jpg</init_from>
         </image>
         <image id="ID38">
-            <init_from>model/__Glass_Gold_Tint_.jpg</init_from>
+            <init_from>__Glass_Gold_Tint_.jpg</init_from>
         </image>
     </library_images>
     <scene>

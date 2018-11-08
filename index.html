@@ -26,8 +26,10 @@
 
         <!-- map and sound -->
         <a-collada-model src="#map"></a-collada-model>
-        <a-sound src="#intro" id="intro_song" autoplay="true" loop="true" ></a-sound>
-        <a-sound src="#xana_song_asset" id="xana_song" autoplay="false" loop="true" ></a-sound>
+        <a-sound src="#intro" volume="40" id="intro_song" autoplay="true" loop="true" ></a-sound>
+        <a-sound src="#xana_song_asset" volume="35" id="xana_song" autoplay="false" loop="true" ></a-sound>
+        <a-sound id="manta_song" ></a-sound>
+
         <a-gltf-model src="#tower" scale="0.1 0.08 0.1" rotation="0 180 0" position="-40 1 -17.034564105607295"></a-gltf-model>
 
         <!-- weapons of Odd -->
@@ -37,10 +39,10 @@
         <a-collada-model start-the-game class="target" target="healthPoints: 1" rotation="90 0 -190" scale="0.09 0.09 0.09" position="-39 1.4 -15" src="#xana_key" ></a-collada-model>
 
         <!-- Xana monster -->
-        <!--<a-obj-model hit-handler src="#manta-obj" class="target" target="healthPoints: 10" rotation="55 20 0" position="-4 6 -4" mtl="#manta-mtl"></a-obj-model>
-        <a-collada-model hit-handler class="target" rotation="0 180 0" target="healthPoints: 15" scale="3 3 3" position="12 1.1 7" src="#megatank"></a-collada-model>
-        <a-collada-model hit-handler class="target" rotation="0 180 0" scale="1 1 1" target="healthPoints: 15"  position="-33 0 -25" src="#block"></a-collada-model>
-        <a-collada-model hit-handler class="target" target="healthPoints: 15" scale="1 1 1" position="12 0 7" src="#crabe"></a-collada-model> -->
+        <a-obj-model hit-handler src="#manta-obj" class="target" target="healthPoints: 10" rotation="55 20 0" position="-77.70512874010862 6 82.51980536939026" mtl="#manta-mtl"></a-obj-model>
+        <a-collada-model hit-handler class="target" rotation="0 180 0" target="healthPoints: 15" scale="3 3 3" position="43.500556057763575 1.1 -77.20177416561422" src="#megatank"></a-collada-model>
+        <a-collada-model hit-handler class="target" rotation="0 180 0" scale="1 1 1" target="healthPoints: 15"  position="126.4202886389323 0 -36.15065118105115" src="#block"></a-collada-model>
+        <a-collada-model hit-handler class="target" target="healthPoints: 15" scale="1 1 1" position="127.51253047644536 0 55.02762217530418" src="#crabe"></a-collada-model> 
 
     
         

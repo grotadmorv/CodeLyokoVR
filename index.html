@@ -1,49 +1,14 @@
 <head>
     <title>Code Lyoko VR</title>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="aframe-super-shooter-kit.min.js"></script>
-    <script>
-        /**
-         * Click mouse to shoot.
-         */
-        AFRAME.registerComponent('click-to-shoot', {
-            init: function () {
-                document.body.addEventListener('mousedown', () => { this.el.emit('shoot'); });
-            }
-        });
-        /**
-         * Change color when hit.
-         */
-        AFRAME.registerComponent('hit-handler', {
-            dependencies: ['material'],
-            init: function () {
-                var color;
-                var el = this.el;
-                color = new THREE.Color();
-                color.set('#666');
-                el.components.material.material.color.copy(color);
-                el.addEventListener('hit', () => {
-                    //el.components.material.material.color.copy(color);
-                    //put song here
-                });
-                el.addEventListener('die', () => {
-                    el.parentNode.removeChild(el);
-                });
-            }
-        });
-        //AFRAME.registerComponent('listener', {
-        //    tick: function () {
-        //      console.log(this.el.getAttribute('position'));
-        //    }
-        //  });
-    </script>
+    <script src="assets/js/aframe-super-shooter-kit.min.js"></script>
 </head>
 
 <body>
     <a-scene>
         
         <a-assets>
-            <a-asset-item id="map" src="assets/model.dae"></a-asset-item>
+            <a-asset-item id="map" src="assets/map/model.dae"></a-asset-item>
             <a-asset-item id="tower" src="assets/tower/scene.gltf"></a-asset-item>
             <a-asset-item id="weapons" src="assets/odd/odd.dae"></a-asset-item>
             <a-asset-item id="arrow" src="assets/weapons/model.dae"></a-asset-item>
@@ -76,4 +41,7 @@
                 <a-entity shooter click-to-shoot position="-1 -0.4 -1" ></a-entity>
         </a-camera>
     </a-scene>
+    <script src="assets/js/camera-position.js"></script>
+    <script src="assets/js/click-shoot.js" ></script>
+    <script src="assets/js/hit-and-die.js" ></script>
 </body>

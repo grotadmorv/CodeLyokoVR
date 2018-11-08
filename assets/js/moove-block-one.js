@@ -1,19 +1,20 @@
 /**
  * Moove odd
  */
-AFRAME.registerComponent('moove-odd-one', {
+AFRAME.registerComponent('moove-block-one', {
     init: function () {
+        var block_one = document.getElementById("block_one");
         var animation = document.createElement("a-animation");
         var animationData = {
             attribute: 'position',
-            dur: 3000,
-            from: '-39 1.4 -15',
-            to: '-39 1.4 -14'
+            dur: 20000,
+            from: '126.4202886389323 0 -36.15065118105115',
+            to: '100 0 -36'
         };
         Object.keys(animationData).forEach(function (attr) {
             animation.setAttribute(attr, animationData[attr]);
         });
 
-        el.appendChild(animation);
+        block_one.appendChild(animation);
     }
 });

@@ -9,6 +9,7 @@ AFRAME.registerComponent('start-the-game', {
         });
         el.addEventListener('die', () => {
             var camera = document.getElementById("camera-entity");
+            var block_one = document.getElementById("block_one");
 
             var intro_song = document.getElementById("intro_song");
             let intro_audio = intro_song.components.sound;
@@ -40,7 +41,8 @@ AFRAME.registerComponent('start-the-game', {
             xana_audio.playSound();
             setTimeout(function () { 
                 manta_audio.playSound(); 
-                camera.setAttribute("moove-odd-one", true);
+                // camera.setAttribute("moove-odd-one", true);
+                block_one.setAttribute("moove-block-one", true);
             }, 10000);
         });
     }

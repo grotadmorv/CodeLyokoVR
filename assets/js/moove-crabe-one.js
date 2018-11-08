@@ -78,7 +78,7 @@ AFRAME.registerComponent('crabe', {
             real_block.setAttribute("hit-handler", true);
             real_block.setAttribute('position', { x :3.215706003309395, y:0, z: 0.4845296198023628})
             real_block.setAttribute('src', '#crabe')
-            real_block.setAttribute('target', "healthPoints: 15");
+            real_block.setAttribute('target', "healthPoints: 2");
             scene.appendChild(real_block);
             }
         , 24000)

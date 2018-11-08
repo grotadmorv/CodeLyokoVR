@@ -10,7 +10,7 @@ AFRAME.registerComponent('moove-odd-one', {
             attribute: 'position',
             dur: 3000,
             from: '-39.651780239809426 0 -19.106626317807265',
-            to: '-32 0 -10'
+            to: '-17.4 0 -3.78'
         };
         Object.keys(animationData).forEach(function (attr) {
             animation.setAttribute(attr, animationData[attr]);

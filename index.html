@@ -46,8 +46,8 @@
 
     
         
-        <a-entity id="camera-entity" position="-39.651780239809426 0 -19.106626317807265" >  
-                <a-camera>
+        <a-entity id="camera-entity" rotation="0 185 0" position="-39.651780239809426 0 -19.106626317807265" >  
+                <a-camera wasd-controls="acceleration: 500">
                         <a-collada-model position="1 -1 -0.1" scale="3 3 3" rotation="0 0 110" src="#weapons"></a-collada-model>
                         <a-entity shooter click-to-shoot position="-1 -0.4 -1" ></a-entity>
                 </a-camera>
@@ -57,4 +57,5 @@
     <script src="assets/js/click-shoot.js" ></script>
     <script src="assets/js/hit-and-die.js" ></script>
     <script src="assets/js/start-the-game.js" ></script>
+    <script src="assets/js/moove-odd-one.js" ></script>
 </body>

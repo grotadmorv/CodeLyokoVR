@@ -1,7 +1,6 @@
 /**
  *  Start the game by hiting the eyes of Xana
  */
-console.log("here")
 AFRAME.registerComponent('start-the-game', {
     dependencies: ['material'],
     init: function () {
@@ -9,6 +8,8 @@ AFRAME.registerComponent('start-the-game', {
         el.addEventListener('hit', () => {
         });
         el.addEventListener('die', () => {
+            var camera = document.getElementById("camera-entity");
+
             var intro_song = document.getElementById("intro_song");
             let intro_audio = intro_song.components.sound;
 
@@ -37,7 +38,10 @@ AFRAME.registerComponent('start-the-game', {
 
             intro_audio.stopSound();
             xana_audio.playSound();
-            setTimeout(function () { manta_audio.playSound(); }, 10000);
+            setTimeout(function () { 
+                manta_audio.playSound(); 
+                camera.setAttribute("moove-odd-one", true);
+            }, 10000);
         });
     }
 });

@@ -6,7 +6,7 @@
 
 <body>
     <a-scene>
-        
+
         <!-- all assets here -->
         <a-assets>
             <a-asset-item id="map" src="assets/map/model.dae"></a-asset-item>
@@ -40,14 +40,14 @@
         <a-collada-model start-the-game class="target" target="healthPoints: 1" rotation="90 0 -190" scale="0.09 0.09 0.09" position="-39 1.4 -15" src="#xana_key" ></a-collada-model>
 
         <!-- Xana monster -->
-        <a-obj-model hit-handler src="#manta-obj" class="target" target="healthPoints: 10" rotation="55 20 0" position="-77.70512874010862 6 82.51980536939026" mtl="#manta-mtl"></a-obj-model>
-        <a-collada-model hit-handler class="target" rotation="0 180 0" target="healthPoints: 15" scale="3 3 3" position="43.500556057763575 1.1 -77.20177416561422" src="#megatank"></a-collada-model>
-        <a-collada-model hit-handler id="block_one" target="healthPoints: 15" class="target" rotation="0 180 0" scale="1 1 1"  position="126.4202886389323 0 -36.15065118105115" src="#block"></a-collada-model>
-        <a-collada-model hit-handler class="target" target="healthPoints: 15" scale="1 1 1" position="127.51253047644536 0 55.02762217530418" src="#crabe"></a-collada-model> 
+        <a-obj-model hit-handler src="#manta-obj" class="target" target="healthPoints: 2" rotation="55 20 0" position="-77.70512874010862 6 82.51980536939026" mtl="#manta-mtl"></a-obj-model>
+        <a-collada-model hit-handler class="target" rotation="0 180 0" target="healthPoints: 2" scale="3 3 3" position="43.500556057763575 1.1 -77.20177416561422" src="#megatank"></a-collada-model>
+        <a-collada-model hit-handler id="block_one" target="healthPoints: 2" class="target" rotation="0 180 0" scale="1 1 1"  position="126.4202886389323 0 -36.15065118105115" src="#block"></a-collada-model>
+        <a-collada-model hit-handler id="crabe_one" class="target" target="healthPoints: 2" scale="1 1 1" position="127.51253047644536 0 55.02762217530418" src="#crabe"></a-collada-model>
 
-    
-        
-        <a-entity id="camera-entity" shooter rotation="0 185 0" position="-39.651780239809426 0 -19.106626317807265" >  
+
+
+        <a-entity id="camera-entity" shooter rotation="0 185 0" position="-39.651780239809426 0 -19.106626317807265" >
                 <a-camera wasd-controls="acceleration: 500" >
                         <a-collada-model position="1 -1 -0.1" scale="3 3 3" rotation="0 0 110" src="#weapons"></a-collada-model>
                         <a-entity shooter click-to-shoot position="-1 -0.4 -1" ></a-entity>
@@ -60,4 +60,5 @@
     <script src="assets/js/start-the-game.js" ></script>
     <script src="assets/js/moove-odd-one.js" ></script>
     <script src="assets/js/moove-block-one.js" ></script>
+    <script src="assets/js/crabe.js" ></script>
 </body>

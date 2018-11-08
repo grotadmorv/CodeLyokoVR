@@ -3,6 +3,7 @@
  */
 AFRAME.registerComponent('moove-odd-one', {
     init: function () {
+
         var camera = document.getElementById("camera-entity");
         var animation = document.createElement("a-animation");
         var animationData = {
@@ -14,6 +15,12 @@ AFRAME.registerComponent('moove-odd-one', {
         Object.keys(animationData).forEach(function (attr) {
             animation.setAttribute(attr, animationData[attr]);
         });
+
+        var banzai_song = document.getElementById('banzai_song');
+        banzai_song.setAttribute("src", "assets/song/banzai.wav");
+        banzai_song.setAttribute("volume", 400);
+        let banzai_audio = banzai_song.components.sound;
+        banzai_audio.playSound(); 
 
         camera.appendChild(animation);
     }

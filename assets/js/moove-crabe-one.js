@@ -94,7 +94,15 @@ AFRAME.registerComponent('crabe', {
             real_block.setAttribute('rotation', {x: 0 ,y: -90, z: 0})
             real_block.setAttribute('src', '#crabe')
             real_block.setAttribute('target', "healthPoints: 2");
+            real_block.setAttribute('id', 'new_crabe');
             scene.appendChild(real_block);
+
+            setInterval(function(){ 
+                var new_crabe = document.getElementById("new_crabe");
+                if(new_crabe !== null){
+                    shoot_the_tower({ x :-8.59, y:0, z: 27.10}, "crabe"); 
+                }
+            }, 3000);
             }
         , 35000)
     }

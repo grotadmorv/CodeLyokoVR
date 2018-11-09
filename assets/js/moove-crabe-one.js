@@ -102,7 +102,7 @@ AFRAME.registerComponent('crabe', {
                 if(new_crabe !== null){
                     shoot_the_tower({ x :-8.59, y:0, z: 27.10}, "crabe"); 
                 }
-            }, 3000);
+            }, 1500);
             }
         , 35000)
     }

@@ -115,7 +115,15 @@ AFRAME.registerComponent('mantra', {
             real_block.setAttribute('src', '#manta-obj')
             real_block.setAttribute('mtl', '#manta-mtl')
             real_block.setAttribute('target', "healthPoints: 5");
+            real_block.setAttribute('id', 'new_manta');
             scene.appendChild(real_block);
+
+            setInterval(function(){ 
+                var new_manta_display = document.getElementById("new_manta");
+                if(new_manta_display !== null){
+                    shoot_the_tower({ x : 3.2516788070048697, y: 6, z: -9.173143928410871}, "manta"); 
+                }
+            }, 3000);
             }
         , 10000)
     }

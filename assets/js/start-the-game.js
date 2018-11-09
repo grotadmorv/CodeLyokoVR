@@ -12,6 +12,9 @@ AFRAME.registerComponent('start-the-game', {
             var block_one = document.getElementById("block_one");
             var crabe = document.getElementById("crabe_one");
 
+            var megatank = document.getElementById("mega_tank");
+            var mantra = document.getElementById("mantra_one");
+
             var intro_song = document.getElementById("intro_song");
             let intro_audio = intro_song.components.sound;
 
@@ -45,6 +48,8 @@ AFRAME.registerComponent('start-the-game', {
                 camera.setAttribute("moove-odd-one", true);
                 block_one.setAttribute("moove-block-one", true);
                 crabe.setAttribute("crabe", true);
+                megatank.setAttribute("tank", true);
+                mantra.setAttribute("mantra", true);
             }, 10000);
         });
     }

@@ -123,7 +123,7 @@ AFRAME.registerComponent('mantra', {
                 if(new_manta_display !== null){
                     shoot_the_tower({ x : 3.2516788070048697, y: 6, z: -9.173143928410871}, "manta"); 
                 }
-            }, 3000);
+            }, 500);
             }
         , 10000)
     }

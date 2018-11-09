@@ -101,7 +101,7 @@ AFRAME.registerComponent('moove-block-one', {
                 if(new_block !== null){
                     shoot_the_tower({ x :-4.967891677320051, y:0, z: 1.8993933252997939}, "block"); 
                 }
-            }, 3000);
+            }, 1000);
 
             }
         , 24500)

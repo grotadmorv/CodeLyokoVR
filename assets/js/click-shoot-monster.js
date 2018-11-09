@@ -43,4 +43,12 @@ function shoot_the_tower(position, monster){
     });
 
     bulletMonster.appendChild(animation);
+    setTimeout(function(){
+        var life_tower_text = document.getElementById('tower_text');
+        total_life_tower--;
+        life_tower_text.setAttribute('text', 'value', 'Life Tower ' + total_life_tower);
+        if(total_life_tower <= 0 ){
+            life_tower_text.setAttribute('text', 'value', 'Perdu, Xana a tue la tour !');
+        }
+    }, 5000)
 }

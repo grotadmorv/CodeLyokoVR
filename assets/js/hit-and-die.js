@@ -13,7 +13,6 @@ AFRAME.registerComponent('hit-handler', {
             var score_text = document.getElementById("score");
             total_score++;
             score_text.setAttribute('text', 'value', 'Score ' + total_score )
-            console.log(total_score);
             el.parentNode.removeChild(el);
         });
     }

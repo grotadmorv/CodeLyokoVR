@@ -95,6 +95,6 @@ AFRAME.registerComponent('moove-block-one', {
             real_block.setAttribute('rotation', {x: 0 , y: -380 , z: 0})
             scene.appendChild(real_block);
             }
-        , 24000)
+        , 24500)
     }
 });

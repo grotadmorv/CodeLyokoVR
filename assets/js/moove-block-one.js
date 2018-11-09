@@ -91,7 +91,7 @@ AFRAME.registerComponent('moove-block-one', {
             real_block.setAttribute("hit-handler", true);
             real_block.setAttribute('position', { x :-4.967891677320051, y:0, z: 1.8993933252997939}) 
             real_block.setAttribute('src', '#block')
-            real_block.setAttribute('target', "healthPoints: 15");
+            real_block.setAttribute('target', "healthPoints: 2");
             real_block.setAttribute('rotation', {x: 0 , y: -380 , z: 0})
             scene.appendChild(real_block);
             }

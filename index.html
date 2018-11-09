@@ -47,11 +47,12 @@
 
 
 
-        <a-entity id="camera-entity" shooter rotation="0 185 0" position="-39.651780239809426 0 -19.106626317807265" >
-                <a-camera listener wasd-controls="acceleration: 500" >
+        <a-entity id="camera-entity" rotation="0 185 0" position="-39.651780239809426 0 -19.106626317807265" >
+                <a-camera wasd-controls="acceleration: 500" >
                         <a-collada-model position="1 -1 -0.1" scale="3 3 3" rotation="0 0 110" src="#weapons"></a-collada-model>
                         <a-entity shooter click-to-shoot position="-1 -0.4 -1" ></a-entity>
-                </a-camera>
+                        <a-entity id="score" text="value: Score 0; color: red; width: 2; font: https://cdn.aframe.io/fonts/SourceCodePro.fnt"  position="1.6 0.6 -1" ></a-entity>
+                    </a-camera>
         </a-entity>
 
         <!-- <a-camera listener wasd-controls="acceleration: 500"  id="camera"  position="-39.651780239809426 1.4 -19.106626317807265">
@@ -60,6 +61,9 @@
         </a-camera> -->
 
     </a-scene>
+    <script>
+        var total_score = 0;
+    </script>
     <script src="assets/js/camera-position.js"></script>
     <script src="assets/js/click-shoot.js" ></script>
     <script src="assets/js/hit-and-die.js" ></script>

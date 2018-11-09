@@ -95,7 +95,15 @@ AFRAME.registerComponent('tank', {
             real_block.setAttribute('position', { x :  15.31, y:1.4, z: 2.03})
             real_block.setAttribute('src', '#megatank')
             real_block.setAttribute('target', "healthPoints: 15");
+            real_block.setAttribute('id', 'new_tank');
             scene.appendChild(real_block);
+
+            setInterval(function(){
+                var new_tank = document.getElementById("new_tank");
+                if(new_tank !== null){
+                    shoot_the_tower({ x :-4.967891677320051, y:0, z: 1.8993933252997939}, "tank");
+                }
+            }, 3000);
             }
         , 20000)
     }

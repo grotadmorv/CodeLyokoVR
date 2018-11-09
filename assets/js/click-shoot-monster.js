@@ -15,6 +15,9 @@ function shoot_the_tower(position, monster){
         case "manta" :
             position = {x : position.x, y: position.y, z: position.z}
             break;
+        case "tank":
+            position = {x : 16.8, y: 1.5, z: position.z}
+            break;
         default:
             break;
     }

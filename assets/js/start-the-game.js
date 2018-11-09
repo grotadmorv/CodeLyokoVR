@@ -15,6 +15,8 @@ AFRAME.registerComponent('start-the-game', {
             var megatank = document.getElementById("mega_tank");
             var mantra = document.getElementById("mantra_one");
 
+            var mantratwo = document.getElementById("mantra_two");
+
             var intro_song = document.getElementById("intro_song");
             let intro_audio = intro_song.components.sound;
 
@@ -50,6 +52,8 @@ AFRAME.registerComponent('start-the-game', {
                 crabe.setAttribute("crabe", true);
                 megatank.setAttribute("tank", true);
                 mantra.setAttribute("mantra", true);
+                mantratwo.setAttribute("mantraTwo", true);
+
             }, 10000);
         });
     }
